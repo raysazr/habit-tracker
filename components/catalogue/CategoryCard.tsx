@@ -1,0 +1,2 @@
+import Link from 'next/link';import { Category } from '@/types/catalogue';import { ProductVisual } from './ProductVisual';
+export function CategoryCard({category}:{category:Category}){return <Link className={`categoryCard ${category.tone}`} href={`/category/${category.slug}`}><ProductVisual kind={category.slug} name={category.name}/><div><p className="eyebrow">{category.name}</p><h3>{category.description}</h3><span>Explore <b>→</b></span></div></Link>}

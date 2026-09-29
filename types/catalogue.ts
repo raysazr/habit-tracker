@@ -1,0 +1,4 @@
+export type CategorySlug = 'cob-lights' | 'downlights' | 'panel-lights' | 'cylinder-lights' | 'track-lights' | 'outdoor-lighting';
+export type Variant = { id: string; code: string; wattage?: string; voltage?: string; frequency?: string; cct?: string; cri?: string; lumens?: string; beamAngle?: string; ipRating?: string; finish?: string; material?: string; dimensions?: string; cutout?: string; image?: string };
+export type Product = { id: string; code: string; name: string; slug: string; category: CategorySlug; categoryName: string; type: string; shortDescription: string; description: string; mainImage?: string; images?: string[]; drawing?: string; specSheet?: string; installationGuide?: string; warranty?: string; featured?: boolean; application: string[]; tags: string[]; variants: Variant[]; seoTitle?: string; seoDescription?: string };
+export type Category = { slug: CategorySlug; name: string; description: string; tone: string };

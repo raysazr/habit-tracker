@@ -1,0 +1,2 @@
+import Link from 'next/link'; import { Product } from '@/types/catalogue'; import { ProductVisual } from './ProductVisual';
+export function ProductCard({product}:{product:Product}){const watts=[...new Set(product.variants.map(v=>v.wattage).filter(Boolean))].join(' · ');return <Link href={`/product/${product.slug}`} className="productCard"><ProductVisual kind={product.category} name={product.name} src={product.mainImage}/><div className="productCardInfo"><h3>{product.name}</h3><p>{product.type}</p><div><span>{watts}</span><b>→</b></div></div></Link>}
